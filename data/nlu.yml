@@ -3,90 +3,93 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - ഹേയ്
+    - ഹലോ
+    - ഹായ്
+    - നീ അവിടെയുണ്ടോ
+    - സുപ്രഭാതം
+    - ഗുഡ് ഈവനിംഗ്
+    - മോയിൻ
+    - ഏയ്
+    - നമുക്ക് പോകാം
+    - ഹായ് സുഹൃത്തേ
+    - സുപ്രഭാതം
+    - ഗുഡ് ഈവനിംഗ്
+    - ഗുഡ് ആഫ്റ്റർനൂൺ
 
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - ഗുഡ് ആഫ്റ്റർനൂൺ
+    - മുഖേന നല്ലത്
+    - പിന്നീട് കാണാം
+    - ശുഭ രാത്രി
+    - ബൈ
+    - വിട
+    - ഒരു നല്ല ദിനം ആശംസിക്കുന്നു
+    - വീണ്ടും എവിടെവെച്ചങ്കിലും കാണാം
+    - ബൈ ബൈ
+    - പിന്നെ കാണാം
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
+    - അതെ
+    - വൈ
+    - തീർച്ചയായും
+    - തീർച്ചയായും
+    - അത് കൊള്ളാം
+    - ശരിയാണ്
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - ഇല്ല
+    - എൻ
+    - ഒരിക്കലും
+    - ഞാൻ അങ്ങനെ കരുതുന്നില്ല
+    - അത് ഇഷ്ടമല്ല
+    - ഒരു വഴിയുമില്ല
+    - ശരിക്കുമല്ല
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - തികഞ്ഞ
+    - മഹത്തായ
+    - അത്ഭുതകരമായ
+    - ഒരു രാജാവിനെപ്പോലെ തോന്നുന്നു
+    - അത്ഭുതകരമായ
+    - എനിക്ക് വളരെ സുഖം തോന്നുന്നു
+    - ഞാൻ മഹാനാണ്
+    - ഞാൻ അത്ഭുതകരമാണ്
+    - ഞാൻ ലോകത്തെ രക്ഷിക്കാൻ പോകുന്നു
+    - സൂപ്പർ സ്റ്റോക്ക്ഡ്
+    - വളരെ നല്ലത്
+    - വളരെ തികഞ്ഞ
+    - വളരെ നല്ലത്
+    - സമ്പൂര്ണ്ണമായ
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - എന്റെ ദിവസം ഭയങ്കരമായിരുന്നു
+    - ഞാൻ ദുഃഖിതനാണ്
+    - എനിക്ക് തീരെ സുഖമില്ല
+    - ഞാൻ നിരാശനാണ്
+    - വളരെ സങ്കടം
+    - ഞാൻ വളരെ ദു .ഖിതനാണ്
+    - ദുഃഖകരമായ
+    - വളരെ ദു: ഖകരം
+    - അസന്തുഷ്ടൻ
+    - നല്ലതല്ല
+    - അത്ര നല്ലതല്ല
+    - അങ്ങേയറ്റം ദു .ഖം
+    - അങ്ങനെ സാദ്
+    - വളരെ സങ്കടകരം
+
+- intent: status
+  examples:  |
+    -സുഖമാണോ?
+    -നീ എന്ത് ചെയ്യുന്നു?
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - നിങ്ങൾ ഒരു ബോട്ട് ആണോ?
+    - നിങ്ങൾ ഒരു മനുഷ്യനാണോ?
+    - ഞാൻ ഒരു ബോട്ടിനോട് സംസാരിക്കുകയാണോ?
+    - ഞാൻ ഒരു മനുഷ്യനോട് സംസാരിക്കുകയാണോ?
