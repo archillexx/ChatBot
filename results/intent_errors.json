@@ -1,0 +1,66 @@
+[
+  {
+    "text": "device  loan not updated",
+    "intent": "DevLoan",
+    "intent_prediction": {
+      "name": "DeviceLoan",
+      "confidence": 0.44347891211509705
+    }
+  },
+  {
+    "text": "i made a payment of my device loan loan which is not updated.",
+    "intent": "DevLoan",
+    "intent_prediction": {
+      "name": "PerLoan",
+      "confidence": 0.9106315970420837
+    }
+  },
+  {
+    "text": "i have already Paid my loan installment.",
+    "intent": "Payment",
+    "intent_prediction": {
+      "name": "Uninstall",
+      "confidence": 0.9989308714866638
+    }
+  },
+  {
+    "text": "i have another issue.",
+    "intent": "Different",
+    "intent_prediction": {
+      "name": "Payment",
+      "confidence": 0.9262213706970215
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "Locked",
+      "confidence": 0.4704779088497162
+    }
+  },
+  {
+    "text": "issue of Personal loan",
+    "intent": "PerLoan",
+    "intent_prediction": {
+      "name": "PersonalLoan",
+      "confidence": 0.5315225720405579
+    }
+  },
+  {
+    "text": "i made a payment of my personal loan which is not updated.",
+    "intent": "PerLoan",
+    "intent_prediction": {
+      "name": "DevLoan",
+      "confidence": 0.8697298169136047
+    }
+  },
+  {
+    "text": "i have completed my payments.",
+    "intent": "Uninstall",
+    "intent_prediction": {
+      "name": "Payment",
+      "confidence": 0.7894160151481628
+    }
+  }
+]

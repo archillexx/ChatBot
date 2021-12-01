@@ -1,0 +1,18 @@
+
+Rasa X is currently being deployed on your machine.
+
+While you're waiting please add the following line to your terminal configuration  (depending on your operating system this is the '~/.bashrc' or '~/.zshrc' file).  This is needed so that you can access the embedded cluster using the 'kubectl' command  line interface.
+
+        export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+Rasa X will be installed into the following Kubernetes namespace: rasa
+
+Please save the following access credentials for later use:
+
+Your Rasa X password is sI3oIvPedW7llqdZxjxi
+
+The passwords for the other services in the deployment are:
+
+Database password (PostgreSQL): 5onQZoW9Fm4UG9v1lUuI
+Event Broker password (RabbitMQ): S6N67s5p8B8SY-ZI8eRn
+Lock Store password (Redis): Dt5nEQr2J9KxlTHYggR1

@@ -1,0 +1,99 @@
+{
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "DevLoan": {
+    "precision": 0.8333333333333334,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7692307692307692,
+    "support": 7,
+    "confused_with": {
+      "PerLoan": 1,
+      "DeviceLoan": 1
+    }
+  },
+  "Locked": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 1.0,
+    "recall": 0.9333333333333333,
+    "f1-score": 0.9655172413793104,
+    "support": 15,
+    "confused_with": {
+      "Locked": 1
+    }
+  },
+  "PerLoan": {
+    "precision": 0.8333333333333334,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7692307692307692,
+    "support": 7,
+    "confused_with": {
+      "PersonalLoan": 1,
+      "DevLoan": 1
+    }
+  },
+  "DeviceLoan": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "Payment": {
+    "precision": 0.7142857142857143,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.7692307692307692,
+    "support": 6,
+    "confused_with": {
+      "Uninstall": 1
+    }
+  },
+  "Different": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5,
+    "confused_with": {
+      "Payment": 1
+    }
+  },
+  "PersonalLoan": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 6,
+    "confused_with": {}
+  },
+  "Uninstall": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10,
+    "confused_with": {
+      "Payment": 1
+    }
+  },
+  "accuracy": 0.9,
+  "macro avg": {
+    "precision": 0.8911904761904763,
+    "recall": 0.8895238095238096,
+    "f1-score": 0.8864774023244788,
+    "support": 80
+  },
+  "weighted avg": {
+    "precision": 0.9040178571428571,
+    "recall": 0.9,
+    "f1-score": 0.8988810082138418,
+    "support": 80
+  }
+}

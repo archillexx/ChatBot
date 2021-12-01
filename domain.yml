@@ -1,38 +1,345 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - status
-
-responses:
-  utter_greet:
-  - text: "എന്താ സുഖമല്ലെ?"
-
-  utter_cheer_up:
-  - text: "നിങ്ങളെ ആശ്വസിപ്പിക്കാൻ ഇതാ:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "അത് നിങ്ങളെ സഹായിച്ചോ?"
-
-  utter_happy:
-  - text: "കൊള്ളാം, തുടരുക!"
-
-  utter_goodbye:
-  - text: "ബൈ"
-
-  utter_iamabot:
-  - text: "ഞാൻ ഒരു ബോട്ട് ആണ്, റാസയാൽ പ്രവർത്തിക്കുന്നത്."
-
-  utter_status:
-  - text: "എനിക്ക് സുഖം തോന്നുന്നു. നന്ദി"
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- PID:
+    use_entities: true
+- Payment:
+    use_entities: true
+- Airtel:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- No:
+    use_entities: true
+- Gpay:
+    use_entities: true
+- charge_review_amount:
+    use_entities: true
+- charge_review_date:
+    use_entities: true
+- Yes_review:
+    use_entities: true
+- Notdeducted:
+    use_entities: true
+- Uninstall:
+    use_entities: true
+- Phonepe:
+    use_entities: true
+- Nachmandate:
+    use_entities: true
+- PerLoan:
+    use_entities: true
+- DOP:
+    use_entities: true
+- DevLoan:
+    use_entities: true
+- Emi:
+    use_entities: true
+- Paytm:
+    use_entities: true
+- UPI:
+    use_entities: true
+- Locked:
+    use_entities: true
+- Bounce:
+    use_entities: true
+- Yes:
+    use_entities: true
+- SF:
+    use_entities: true
+- Different:
+    use_entities: true
+- Extra:
+    use_entities: true
+- DeviceLoan:
+    use_entities: true
+- PersonalLoan:
+    use_entities: true
+- Human:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+entities:
+- Date
+- loan_type
+- CRA
+- CRD
+- issue_type
+- mop
+- pid
+slots:
+  issue_type:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - '-'
+    - p
+    - a
+    - y
+    - m
+    - e
+    - n
+    - t
+    - ' '
+    - '-'
+    - b
+    - o
+    - u
+    - n
+    - c
+    - e
+    - ' '
+    - '-'
+    - h
+    - u
+    - m
+    - a
+    - n
+    - ' '
+    - '-'
+    - e
+    - x
+    - t
+    - r
+    - a
+    - ' '
+    - '-'
+    - u
+    - n
+    - i
+    - n
+    - s
+    - t
+    - a
+    - l
+    - l
+    - ' '
+    - '-'
+    - l
+    - o
+    - c
+    - k
+    - e
+    - d
+    - ' '
+    - '-'
+    - d
+    - i
+    - f
+    - f
+    - e
+    - r
+    - e
+    - n
+    - t
+  loan_type:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - '-'
+    - p
+    - e
+    - r
+    - l
+    - o
+    - a
+    - n
+    - ' '
+    - '-'
+    - d
+    - e
+    - v
+    - l
+    - o
+    - a
+    - n
+  date:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  CRA:
+    type: rasa.shared.core.slots.FloatSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    max_value: 1.0
+    min_value: 0.0
+  CRD:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  syncstatus:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - '-'
+    - s
+    - u
+    - c
+    - c
+    - e
+    - s
+    - s
+    - ' '
+    - '-'
+    - f
+    - a
+    - i
+    - l
+    - e
+    - d
+  pid:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  Date:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  mop:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_PID:
+  - text: What type of Payment(PID) ?
+  utter_out_of_scope:
+  - text: I did not understand that
+  utter_greet:
+  - text: Hey! How can I assist you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_else:
+  - text: Done. Have a nice day
+  utter_Payment:
+  - text: What kind of Payment Issue are you facing?
+  utter_PerLoan:
+  - text: Checking for Personal Loan Payment
+  utter_confirm:
+  - text: Please check the details.
+  utter_DevLoan:
+  - text: Checking for Development Loan Payment.
+  utter_DOP:
+  - text: Kindly, tell the Date of Payment.
+  utter_updated:
+  - text: The Payment was successful and has been updated.
+  utter_MOP:
+  - text: Please, Enter the Method of Payment.
+  utter_Bounce:
+  - text: What type of Bounce Loan?
+  utter_charges_reviewed_amount:
+  - text: Kindly, tell the charged amount
+  utter_charges_review_date:
+  - text: Kindly, tell the date on which it was charged.
+  utter_confirm_charge_review:
+  - text: 'Please confirm the charge review details:'
+  utter_applied:
+  - text: The charge review has been applied
+  utter_charges_reviewed_date:
+  - text: Tell the last date charges were reviewed
+  utter_Uninstall:
+  - text: Tell us the reason why you want to uninstall the app
+  utter_something_else:
+  - text: Do you want to do something else?
+  utter_Locked:
+  - text: Checking the lock
+  utter_Bye:
+  - text: GoodBye
+  utter_still_review:
+  - text: Do you still want to review?
+  utter_thank:
+  - text: Thank you.
+  utter_cpid:
+  - text: utter cpid i don't know what this does
+  utter_cmop:
+  - text: Confirm method of payment
+  utter_yes_review:
+  - text: Review please.
+  utter_ask_review:
+  - text: Please write a review so that we can improve
+  utter_Emi:
+  - text: Please enter EMI
+actions:
+- utter_Locked
+- utter_something_else
+- utter_Uninstall
+- utter_charges_reviewed_date
+- utter_PID
+- utter_out_of_scope
+- action_service
+- utter_Payment
+- utter_PerLoan
+- check_payment_P
+- utter_confirm
+- utter_MOP
+- utter_DevLoan
+- check_payment_D
+- utter_DOP
+- utter_updated
+- utter_Bounce
+- utter_charges_reviewed_amount
+- utter_charges_review_date
+- utter_confirm_charge_review
+- check_bounce_charge
+- utter_applied
+- action_session_start
+- utter_Bye
+- utter_Emi
+- utter_cmop
+- utter_cpid
+- utter_thank
+- utter_else
+- action_nachmandate
+- utter_ask_review
+- action_Notdeducted
+- utter_still_review
+- utter_yes_review
+- check_loan_status
+- check_lock
+- Diff_form
+- action_Diff_submit
+forms: {}
+e2e_actions: []
